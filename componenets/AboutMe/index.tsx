@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  ImageListItem,
-  Typography,
-} from "@mui/material";
-import SecondaryContainedButton from "../SeondaryContainedButton";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 
 export default function AboutMe() {
   return (

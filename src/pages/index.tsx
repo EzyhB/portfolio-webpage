@@ -1,12 +1,13 @@
 import { Container, CssBaseline, Grid } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import React from "react";
-import { makeStyles } from "@mui/styles";
+
 import { useState } from "react";
 import { darkTheme, lightTheme } from "../styles/themes";
 import Navbar from "../../componenets/Navbar";
 import HeroSection from "../../componenets/HeroSection";
 import AboutMe from "../../componenets/AboutMe";
+import Skills from "../../componenets/Skills";
 
 interface MyTheme {
   background: string;
@@ -41,6 +42,7 @@ export default function IndexPage() {
         <Navbar />
         <HeroSection />
         <AboutMe />
+        <Skills isLight={isLight} />
       </Container>
     </ThemeProvider>
   );
