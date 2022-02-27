@@ -11,6 +11,12 @@ export const darkTheme = createTheme({
       contrastText: "fff",
     },
   },
+  // typography: {
+  //   h1: {
+  //     htmlFontSize: 16,
+  //     px
+  //   },
+  // },
 });
 export const lightTheme = createTheme({
   palette: {

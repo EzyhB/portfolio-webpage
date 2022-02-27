@@ -5,6 +5,7 @@ import { makeStyles } from "@mui/styles";
 import { useState } from "react";
 import { darkTheme, lightTheme } from "../styles/themes";
 import Navbar from "../../componenets/Navbar";
+import HeroSection from "../../componenets/HeroSection";
 
 interface MyTheme {
   background: string;
@@ -37,6 +38,7 @@ export default function IndexPage() {
         }}
       >
         <Navbar />
+        <HeroSection />
       </Container>
     </ThemeProvider>
   );
