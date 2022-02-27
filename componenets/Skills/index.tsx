@@ -27,6 +27,9 @@ import rtl from "/src/images/rtl.png";
 import sql from "/src/images/sql.png";
 import ts from "/src/images/ts.png";
 import gatsby from "/src/images/gatsby.png";
+import mongo from "/src/images/mongo.png";
+import sass from "/src/images/sass.png";
+import ccc from "/src/images/ccc.png";
 
 const skills = [
   { name: "HTML5", image: html5 },
@@ -46,6 +49,12 @@ const skills = [
   { name: "BootStrap", image: bootstrap },
   { name: "Python", image: python },
   { name: "Gatsby", image: gatsby },
+];
+
+const learning = [
+  { name: "SASS", image: sass },
+  { name: "MongoDB", image: mongo },
+  { name: "C++", image: ccc },
 ];
 
 type props = {
@@ -105,7 +114,27 @@ export default function Skills({ isLight }: props) {
         Learning
       </Typography>
       <Box sx={{ m: { md: 10, sm: 8, xs: 8 } }} />
-      <Grid container sx={{ display: "flex", justifyContent: "center" }}></Grid>
+      <Grid container sx={{ display: "flex", justifyContent: "center" }}>
+        {learning.map((el, index) => (
+          <Grid
+            item
+            md={2}
+            sm={3}
+            xs={4}
+            key={index}
+            sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
+          >
+            <ImageListItem sx={{ marginBottom: "1.5rem", marginTop: "1rem" }}>
+              <img src={el.image} style={{ width: "100%", height: "6rem" }} />
+            </ImageListItem>
+            <Container sx={{ display: "flex", justifyContent: "center" }}>
+              <Typography paragraph sx={{ marginBottom: "2rem" }}>
+                {el.name}
+              </Typography>
+            </Container>
+          </Grid>
+        ))}
+      </Grid>
     </Container>
   );
 }
