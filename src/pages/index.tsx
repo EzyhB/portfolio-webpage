@@ -6,6 +6,7 @@ import { useState } from "react";
 import { darkTheme, lightTheme } from "../styles/themes";
 import Navbar from "../../componenets/Navbar";
 import HeroSection from "../../componenets/HeroSection";
+import AboutMe from "../../componenets/AboutMe";
 
 interface MyTheme {
   background: string;
@@ -39,6 +40,7 @@ export default function IndexPage() {
       >
         <Navbar />
         <HeroSection />
+        <AboutMe />
       </Container>
     </ThemeProvider>
   );
