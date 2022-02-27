@@ -41,7 +41,7 @@ export default function IndexPage() {
       >
         <Navbar setsIsLight={setIsLight} issLight={isLight} />
         <HeroSection />
-        <AboutMe />
+        <AboutMe isLight={isLight} />
         <Skills isLight={isLight} />
       </Container>
     </ThemeProvider>

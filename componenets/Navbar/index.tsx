@@ -120,9 +120,9 @@ const Navbar = ({ setsIsLight, issLight }: props) => {
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
+            <ThemeSwitch onClick={() => setsIsLight(!issLight)} />
             <Tooltip title="Contact Me">
               <IconButton sx={{ p: 0 }}>
-                <ThemeSwitch onClick={() => setsIsLight(!issLight)} />
                 <SecondaryContainedButton text="Contact Me" />
               </IconButton>
             </Tooltip>

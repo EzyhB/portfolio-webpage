@@ -27,6 +27,7 @@ export const lightTheme = createTheme({
     },
     secondary: {
       main: "#EB785B",
+      contrastText: "#fff",
     },
   },
 });

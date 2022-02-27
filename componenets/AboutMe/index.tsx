@@ -1,7 +1,10 @@
 import React from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 
-export default function AboutMe() {
+type props = {
+  isLight: boolean;
+};
+export default function AboutMe({ isLight }: props) {
   return (
     <Container maxWidth="xl">
       <Box sx={{ m: { md: 20, sm: 15, xs: 15 } }} />
@@ -27,7 +30,7 @@ export default function AboutMe() {
           </Typography>
           <Button
             color="secondary"
-            variant="outlined"
+            variant="contained"
             sx={{ borderRadius: "40px" }}
           >
             Read More
