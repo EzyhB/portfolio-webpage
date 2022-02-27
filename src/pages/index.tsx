@@ -39,7 +39,7 @@ export default function IndexPage() {
             : "linear-gradient(33.55deg, #984D38 -14.94%, #181E41 82.82%)",
         }}
       >
-        <Navbar />
+        <Navbar setsIsLight={setIsLight} issLight={isLight} />
         <HeroSection />
         <AboutMe />
         <Skills isLight={isLight} />

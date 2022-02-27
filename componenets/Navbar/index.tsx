@@ -12,10 +12,16 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import SecondaryContainedButton from "../../componenets/SeondaryContainedButton";
+import ThemeSwitch from "../../componenets/ThemeSwitch";
 
 const pages = ["Home", "About", "Skills", "Projects"];
 
-const Navbar = () => {
+type props = {
+  setsIsLight: Function;
+  issLight: boolean;
+};
+
+const Navbar = ({ setsIsLight, issLight }: props) => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -65,7 +71,7 @@ const Navbar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
-                  color: "white",
+                  color: issLight ? "black" : "white",
                   display: "block",
                   margin: { lg: "3em", md: "2em" },
                 }}
@@ -116,6 +122,7 @@ const Navbar = () => {
           <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
             <Tooltip title="Contact Me">
               <IconButton sx={{ p: 0 }}>
+                <ThemeSwitch onClick={() => setsIsLight(!issLight)} />
                 <SecondaryContainedButton text="Contact Me" />
               </IconButton>
             </Tooltip>

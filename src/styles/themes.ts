@@ -5,10 +5,11 @@ export const darkTheme = createTheme({
     mode: "dark",
     primary: {
       main: "#181E41",
+      contrastText: "#fff",
     },
     secondary: {
       main: "#EB785B",
-      contrastText: "fff",
+      contrastText: "#fff",
     },
   },
   // typography: {
