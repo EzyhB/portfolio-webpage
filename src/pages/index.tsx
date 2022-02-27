@@ -40,7 +40,7 @@ export default function IndexPage() {
         }}
       >
         <Navbar setsIsLight={setIsLight} issLight={isLight} />
-        <HeroSection />
+        <HeroSection isLight={isLight} />
         <AboutMe isLight={isLight} />
         <Skills isLight={isLight} />
       </Container>
