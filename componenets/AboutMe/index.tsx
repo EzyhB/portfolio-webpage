@@ -25,7 +25,7 @@ export default function AboutMe() {
             other developers to make software that is meaningful and fulfills
             the purpose of our user stories.
           </Typography>
-          <Typography variant="subtitle1">
+          <Typography variant="subtitle1" paragraph>
             I pride myself in writing code that is clean, easy to maintain &#38;
             im always curious about the different ways in which I can make this
             practice more effective. Although I have a very sharp eye for detail
