@@ -117,6 +117,9 @@ const Navbar = ({ setsIsLight, issLight }: props) => {
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">Contact Me</Typography>
               </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <ThemeSwitch onClick={() => setsIsLight(!issLight)} />
+              </MenuItem>
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
