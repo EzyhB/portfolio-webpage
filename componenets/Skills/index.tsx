@@ -63,7 +63,7 @@ type props = {
 
 export default function Skills({ isLight }: props) {
   return (
-    <Container>
+    <Container id="skills">
       <Box sx={{ m: { md: 30, sm: 25, xs: 20 } }} />
       <Typography variant="h2" align="center">
         Tech Stack

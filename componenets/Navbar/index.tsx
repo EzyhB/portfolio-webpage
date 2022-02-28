@@ -13,8 +13,14 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import SecondaryContainedButton from "../../componenets/SeondaryContainedButton";
 import ThemeSwitch from "../../componenets/ThemeSwitch";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
-const pages = ["Home", "About", "Skills", "Projects"];
+const pages = [
+  { name: "Home", ref: "navbar" },
+  { name: "About", ref: "aboutme" },
+  { name: "Skills", ref: "skills" },
+  { name: "Projects", ref: "myprojects" },
+];
 
 type props = {
   setsIsLight: Function;
@@ -35,7 +41,12 @@ const Navbar = ({ setsIsLight, issLight }: props) => {
   };
 
   return (
-    <AppBar position="static" color="transparent" sx={{ boxShadow: "none" }}>
+    <AppBar
+      position="static"
+      color="transparent"
+      id="navbar"
+      sx={{ boxShadow: "none" }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -66,18 +77,20 @@ const Navbar = ({ setsIsLight, issLight }: props) => {
             }}
           >
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: issLight ? "black" : "white",
-                  display: "block",
-                  margin: { lg: "3em", md: "2em" },
-                }}
-              >
-                {page}
-              </Button>
+              <AnchorLink to={"#" + page.ref}>
+                <Button
+                  key={page.name}
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    my: 2,
+                    color: issLight ? "black" : "white",
+                    display: "block",
+                    margin: { lg: "3em", md: "2em" },
+                  }}
+                >
+                  {page.name}
+                </Button>
+              </AnchorLink>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
@@ -110,9 +123,11 @@ const Navbar = ({ setsIsLight, issLight }: props) => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                <AnchorLink to={"#" + page.ref}>
+                  <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page.name}</Typography>
+                  </MenuItem>
+                </AnchorLink>
               ))}
               <MenuItem onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">Contact Me</Typography>
@@ -126,7 +141,9 @@ const Navbar = ({ setsIsLight, issLight }: props) => {
             <ThemeSwitch onClick={() => setsIsLight(!issLight)} />
             <Tooltip title="Contact Me">
               <IconButton sx={{ p: 0 }}>
-                <SecondaryContainedButton text="Contact Me" />
+                <AnchorLink to="#email-me">
+                  <SecondaryContainedButton text="Contact Me" />
+                </AnchorLink>
               </IconButton>
             </Tooltip>
           </Box>

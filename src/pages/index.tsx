@@ -9,6 +9,7 @@ import HeroSection from "../../componenets/HeroSection";
 import AboutMe from "../../componenets/AboutMe";
 import Skills from "../../componenets/Skills";
 import MyProjects from "../../componenets/MyProjects";
+import EmailSection from "../../componenets/EmailSection";
 
 interface MyTheme {
   background: string;
@@ -45,6 +46,7 @@ export default function IndexPage() {
         <AboutMe isLight={isLight} />
         <Skills isLight={isLight} />
         <MyProjects isLight={isLight} />
+        <EmailSection />
       </Container>
     </ThemeProvider>
   );

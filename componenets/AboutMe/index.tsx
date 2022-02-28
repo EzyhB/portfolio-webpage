@@ -6,7 +6,7 @@ type props = {
 };
 export default function AboutMe({ isLight }: props) {
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="xl" id="aboutme">
       <Box sx={{ m: { md: 20, sm: 15, xs: 15 } }} />
       <Grid container>
         <Grid item md={8}>

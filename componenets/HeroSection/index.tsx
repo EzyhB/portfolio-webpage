@@ -14,11 +14,14 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import EmailIcon from "@mui/icons-material/Email";
 import Ezyhblk from "/src/images/ezyh-picturecblk.png";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+
 // import { EzyhSVG } from "/src/images/ezyh-drawing.js";
 
 type props = {
   isLight: boolean;
 };
+
 export default function HeroSection({ isLight }: props) {
   return (
     <Container maxWidth="xl">
@@ -68,21 +71,39 @@ export default function HeroSection({ isLight }: props) {
                 justifyContent: "space-between",
               }}
             >
-              <LinkedInIcon color="secondary" />
+              <a href="https://www.linkedin.com/in/ezyh/" target={"_blank"}>
+                <LinkedInIcon color="secondary" />
+              </a>
 
-              <GitHubIcon color="secondary" />
+              <a href="https://github.com/EzyhB" target={"_blank"}>
+                <GitHubIcon color="secondary" />
+              </a>
 
-              <YouTubeIcon color="secondary" />
+              <a
+                href="https://www.youtube.com/channel/UCK79_AS6WNbt2UK3ny2otRA"
+                target={"_blank"}
+              >
+                <YouTubeIcon color="secondary" />
+              </a>
 
-              <EmailIcon color="secondary" />
+              <AnchorLink to="#email-me">
+                <EmailIcon color="secondary" />
+              </AnchorLink>
             </Box>
             <Box
               sx={{ display: "flex", flexGrow: 4, justifyContent: "flex-end" }}
             >
-              <Button color="secondary">Contact Me</Button>
-              <SecondaryContainedButton text="My Projects" />
+              <AnchorLink to="#email-me">
+                <Button color="secondary" sx={{ textDecoration: "none" }}>
+                  Contact Me
+                </Button>
+              </AnchorLink>
+              <AnchorLink to="#myprojects">
+                <SecondaryContainedButton text="My Projects" />
+              </AnchorLink>
             </Box>
           </Box>
+          <Box sx={{ m: { md: 20, sm: 20, xs: 15 } }} />
         </Grid>
         <Grid
           item

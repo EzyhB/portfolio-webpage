@@ -1,18 +1,12 @@
 import React from "react";
-import {
-  Button,
-  Container,
-  Grid,
-  ImageListItem,
-  Typography,
-  Box,
-} from "@mui/material";
+import { Container, Grid, ImageListItem, Typography, Box } from "@mui/material";
 
 import portfolio from "/src/images/portfolio.png";
 import portfolioLight from "/src/images/portfolioLight.png";
 import algo from "/src/images/algo.png";
 import clanop from "/src/images/clanop.png";
 import algo1st from "/src/images/algo1st.png";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const projects = [
   {
@@ -41,7 +35,7 @@ type props = {
 
 export default function MyProejcts({ isLight }: props) {
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="xl" id="myprojects">
       <Box sx={{ m: { md: 30, sm: 25, xs: 20 } }} />
       <Typography variant="h2" align="center" paragraph>
         My Projects
@@ -65,10 +59,12 @@ export default function MyProejcts({ isLight }: props) {
           <ImageListItem
             sx={{ marginBottom: "1.5rem", marginTop: "1rem", padding: "1rem" }}
           >
-            <img
-              src={isLight ? portfolio : portfolioLight}
-              style={{ width: "100%" }}
-            />
+            <AnchorLink to="#navbar">
+              <img
+                src={isLight ? portfolio : portfolioLight}
+                style={{ width: "100%" }}
+              />
+            </AnchorLink>
           </ImageListItem>
           <Container sx={{ display: "flex", justifyContent: "center" }}>
             <Typography paragraph sx={{ marginBottom: "2rem" }} variant="h5">
@@ -92,7 +88,9 @@ export default function MyProejcts({ isLight }: props) {
                 padding: "1rem",
               }}
             >
-              <img src={el.proj_image} style={{ width: "100%" }} />
+              <a href={el.link} target={"_blank"}>
+                <img src={el.proj_image} style={{ width: "100%" }} />
+              </a>
             </ImageListItem>
             <Container sx={{ display: "flex", justifyContent: "center" }}>
               <Typography paragraph sx={{ marginBottom: "2rem" }} variant="h5">
