@@ -35,7 +35,7 @@ const Navbar = ({ setsIsLight, issLight }: props) => {
   };
 
   return (
-    <AppBar position="sticky" color="transparent" sx={{ boxShadow: "none" }}>
+    <AppBar position="static" color="transparent" sx={{ boxShadow: "none" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
