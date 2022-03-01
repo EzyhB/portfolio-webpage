@@ -42,10 +42,11 @@ export default function MyProejcts({ isLight }: props) {
       </Typography>
       <Container maxWidth="md">
         <Typography>
-          I'vs also added some of my projects from when I first started coding
-          around November 2021, the good ol' days when I was asking Coach Arshi
-          why my function isn't doing anything while I'm here not putting any
-          return statements in any functions in my Rock Paper Scissors Game.
+          I'vs will soon add some of my projects from when I first started
+          coding around November 2021, the good ol' days when I was asking Coach
+          Arshi why my function isn't doing anything while I was completely
+          oblivious to the fact that functions all need return statements in my
+          Rock, Paper, Scissors game!
         </Typography>
       </Container>
       <Box sx={{ m: { md: 10, sm: 8, xs: 8 } }} />
@@ -62,7 +63,7 @@ export default function MyProejcts({ isLight }: props) {
             <AnchorLink to="#navbar">
               <img
                 src={isLight ? portfolio : portfolioLight}
-                style={{ width: "100%" }}
+                style={{ width: "100%", height: "auto", borderRadius: "1rem" }}
               />
             </AnchorLink>
           </ImageListItem>
@@ -89,7 +90,14 @@ export default function MyProejcts({ isLight }: props) {
               }}
             >
               <a href={el.link} target={"_blank"}>
-                <img src={el.proj_image} style={{ width: "100%" }} />
+                <img
+                  src={el.proj_image}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    borderRadius: "1rem",
+                  }}
+                />
               </a>
             </ImageListItem>
             <Container sx={{ display: "flex", justifyContent: "center" }}>
