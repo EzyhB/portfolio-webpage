@@ -14,6 +14,11 @@ import MenuItem from "@mui/material/MenuItem";
 import SecondaryContainedButton from "../../componenets/SeondaryContainedButton";
 import ThemeSwitch from "../../componenets/ThemeSwitch";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { ImageListItem } from "@mui/material";
+import { maxWidth } from "@mui/system";
+
+import logoLight from "/src/images/aShahLight.png";
+import logoDark from "/src/images/aShahDark.png";
 
 const pages = [
   { name: "Home", ref: "navbar" },
@@ -40,6 +45,7 @@ const Navbar = ({ setsIsLight, issLight }: props) => {
     setAnchorElNav(null);
   };
 
+  let logo = issLight ? logoDark : logoLight;
   return (
     <AppBar
       position="static"
@@ -49,26 +55,37 @@ const Navbar = ({ setsIsLight, issLight }: props) => {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-          >
-            LOGO
-          </Typography>
-
-          <Typography
-            variant="h6"
-            noWrap
+          <ImageListItem
             component="div"
             sx={{
-              flexGrow: 1,
-              display: { xs: "flex", md: "none" },
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+              maxWidth: "10rem",
             }}
           >
-            LOGO
-          </Typography>
+            <img
+              src={logo}
+              alt="logo"
+              style={{ width: "100%", height: "auto", margin: "1rem 0" }}
+            />
+          </ImageListItem>
+
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <ImageListItem
+              component="div"
+              sx={{
+                mr: 2,
+
+                maxWidth: "7rem",
+              }}
+            >
+              <img
+                src={logo}
+                alt="logo"
+                style={{ width: "100%", height: "auto", margin: "1rem 0" }}
+              />
+            </ImageListItem>
+          </Box>
           <Box
             sx={{
               flexGrow: 1,
