@@ -6,14 +6,13 @@ type props = {
   goto: string;
 };
 
-export default function SecondaryContainedButton({ text, goto }: props) {
+export default function SecondaryContainedButton({ text }: props) {
   return (
     <Button
       variant="contained"
       color="secondary"
       sx={{ borderRadius: "40px" }}
       disableRipple={true}
-      href={goto}
     >
       {text}
     </Button>

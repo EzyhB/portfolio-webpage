@@ -15,6 +15,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import EmailIcon from "@mui/icons-material/Email";
 import Ezyhblk from "/src/images/ezyh-picturecblk.png";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 // import { EzyhSVG } from "/src/images/ezyh-drawing.js";
 
@@ -94,16 +95,19 @@ export default function HeroSection({ isLight }: props) {
               sx={{ display: "flex", flexGrow: 4, justifyContent: "flex-end" }}
             >
               {/* <AnchorLink to="#email-me"> */}
-              <Button
-                color="secondary"
-                sx={{ textDecoration: "none", scrollBehavior: "smooth" }}
-                href="#email-me"
-              >
+              <Button color="secondary" onClick={() => scrollTo("#email-me")}>
                 Contact Me
               </Button>
               {/* </AnchorLink> */}
               {/* <AnchorLink to="#myprojects"> */}
-              <SecondaryContainedButton text="My Projects" goto="#myprojects" />
+              <Button
+                onClick={() => scrollTo("#myprojects")}
+                variant="contained"
+                color="secondary"
+                sx={{ borderRadius: "40px" }}
+              >
+                My Projects
+              </Button>
               {/* </AnchorLink> */}
             </Box>
           </Box>

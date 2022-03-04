@@ -16,6 +16,7 @@ import ThemeSwitch from "../../componenets/ThemeSwitch";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { ImageListItem } from "@mui/material";
 import { maxWidth } from "@mui/system";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 import logoLight from "/src/images/aShahLight.png";
 import logoDark from "/src/images/aShahDark.png";
@@ -94,20 +95,21 @@ const Navbar = ({ setsIsLight, issLight }: props) => {
             }}
           >
             {pages.map((page) => (
-              <AnchorLink to={"#" + page.ref}>
-                <Button
-                  key={page.name}
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    my: 2,
-                    color: issLight ? "black" : "white",
-                    display: "block",
-                    margin: { lg: "3em", md: "2em" },
-                  }}
-                >
-                  {page.name}
-                </Button>
-              </AnchorLink>
+              <Button
+                key={page.name}
+                onClick={() => {
+                  handleCloseNavMenu();
+                  scrollTo("#" + page.ref);
+                }}
+                sx={{
+                  my: 2,
+                  color: issLight ? "black" : "white",
+                  display: "block",
+                  margin: { lg: "3em", md: "2em" },
+                }}
+              >
+                {page.name}
+              </Button>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
@@ -142,13 +144,25 @@ const Navbar = ({ setsIsLight, issLight }: props) => {
               {pages.map((page) => (
                 <AnchorLink to={"#" + page.ref}>
                   <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page.name}</Typography>
+                    <Typography
+                      textAlign="center"
+                      color={issLight ? "black" : "white"}
+                    >
+                      {page.name}
+                    </Typography>
                   </MenuItem>
                 </AnchorLink>
               ))}
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Contact Me</Typography>
-              </MenuItem>
+              <AnchorLink to={"#email-me"}>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography
+                    textAlign="center"
+                    color={issLight ? "black" : "white"}
+                  >
+                    Contact Me
+                  </Typography>
+                </MenuItem>
+              </AnchorLink>
               <MenuItem onClick={handleCloseNavMenu}>
                 <ThemeSwitch onClick={() => setsIsLight(!issLight)} />
               </MenuItem>
@@ -159,7 +173,14 @@ const Navbar = ({ setsIsLight, issLight }: props) => {
             <Tooltip title="Contact Me">
               <IconButton sx={{ p: 0 }}>
                 {/* <AnchorLink to="#email-me"> */}
-                <SecondaryContainedButton text="Contact Me" goto="#email-me" />
+                <Button
+                  onClick={() => scrollTo("#email-me")}
+                  variant="contained"
+                  color="secondary"
+                  sx={{ borderRadius: "40px" }}
+                >
+                  Contact Me
+                </Button>
                 {/* </AnchorLink> */}
               </IconButton>
             </Tooltip>
