@@ -141,9 +141,9 @@ const Navbar = ({ setsIsLight, issLight }: props) => {
             <ThemeSwitch onClick={() => setsIsLight(!issLight)} />
             <Tooltip title="Contact Me">
               <IconButton sx={{ p: 0 }}>
-                <AnchorLink to="#email-me">
-                  <SecondaryContainedButton text="Contact Me" />
-                </AnchorLink>
+                {/* <AnchorLink to="#email-me"> */}
+                <SecondaryContainedButton text="Contact Me" goto="#email-me" />
+                {/* </AnchorLink> */}
               </IconButton>
             </Tooltip>
           </Box>

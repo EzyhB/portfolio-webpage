@@ -93,14 +93,18 @@ export default function HeroSection({ isLight }: props) {
             <Box
               sx={{ display: "flex", flexGrow: 4, justifyContent: "flex-end" }}
             >
-              <AnchorLink to="#email-me">
-                <Button color="secondary" sx={{ textDecoration: "none" }}>
-                  Contact Me
-                </Button>
-              </AnchorLink>
-              <AnchorLink to="#myprojects">
-                <SecondaryContainedButton text="My Projects" />
-              </AnchorLink>
+              {/* <AnchorLink to="#email-me"> */}
+              <Button
+                color="secondary"
+                sx={{ textDecoration: "none", scrollBehavior: "smooth" }}
+                href="#email-me"
+              >
+                Contact Me
+              </Button>
+              {/* </AnchorLink> */}
+              {/* <AnchorLink to="#myprojects"> */}
+              <SecondaryContainedButton text="My Projects" goto="#myprojects" />
+              {/* </AnchorLink> */}
             </Box>
           </Box>
           <Box sx={{ m: { md: 20, sm: 20, xs: 15 } }} />
