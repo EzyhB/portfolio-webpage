@@ -13,6 +13,7 @@ export default function SecondaryContainedButton({ text }: props) {
       color="secondary"
       sx={{ borderRadius: "40px" }}
       disableRipple={true}
+      
     >
       {text}
     </Button>
