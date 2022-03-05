@@ -75,6 +75,7 @@ export default function EmailSection() {
                 name="_next"
                 value="https://a-shah-portfolio.vercel.app/"
               ></input>
+              <input type="hidden" name="_captcha" value="false"></input>
               <Button
                 variant="contained"
                 color="secondary"
