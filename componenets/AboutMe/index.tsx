@@ -15,7 +15,7 @@ export default function AboutMe({ isLight }: props) {
       <Grid container>
         <Grid item md={8}>
           <Typography paragraph variant="h2">
-            About Me &#38;
+            About Me
           </Typography>
           <Typography paragraph variant="subtitle1">
             Along with being a developer, I'm also a content creator, business
