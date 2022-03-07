@@ -66,10 +66,10 @@ export default function AboutMe({ isLight }: props) {
               <br />
               This has been my tech journey so far, to finish off, I'd like to
               thank the entire team of coaches at SOC:
-              <br /> - Chris Meah <br />- Arshi Sheikh <br />- Jordan Linton{" "}
+              <br /> - Chris Meah <br />- Arshi Sheikh <br />- Jordan Linton
               <br />- Kentleigh English <br />- Liz Kaufman <br />- Helena
               Archer <br />- Jasien Elimy <br />- Dave Adams <br />- Chris
-              Miller <br />- Abdullah Chaudhry <br />- Hamzah
+              Miller <br />- Abdullah Chaudhry <br />- Hamzah Ibrahim
               <br />
               <br />
               Each one of your names I have memorised and I value every bit of
