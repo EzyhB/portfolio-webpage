@@ -30,6 +30,8 @@ import gatsby from "/src/images/gatsby.png";
 import mongo from "/src/images/mongo.png";
 import sass from "/src/images/sass.png";
 import ccc from "/src/images/ccc.png";
+import cypress from "/src/images/cypress.png";
+import csharp from "/src/images/csharp.png";
 
 const skills = [
   { name: "HTML5", image: html5 },
@@ -49,12 +51,14 @@ const skills = [
   { name: "BootStrap", image: bootstrap },
   { name: "Python", image: python },
   { name: "Gatsby", image: gatsby },
+  { name: "Cypress", image: cypress },
+  { name: "SASS", image: sass },
 ];
 
 const learning = [
-  { name: "SASS", image: sass },
   { name: "MongoDB", image: mongo },
   { name: "C++", image: ccc },
+  { name: "C Sharp", image: csharp },
 ];
 
 type props = {
