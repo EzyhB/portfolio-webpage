@@ -58,7 +58,7 @@ const skills = [
 const learning = [
   { name: "MongoDB", image: mongo },
   { name: "C++", image: ccc },
-  { name: "C Sharp", image: csharp },
+  { name: "C#", image: csharp },
 ];
 
 type props = {
