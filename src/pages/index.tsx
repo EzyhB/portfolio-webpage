@@ -10,6 +10,7 @@ import AboutMe from "../../componenets/AboutMe";
 import Skills from "../../componenets/Skills";
 import MyProjects from "../../componenets/MyProjects";
 import EmailSection from "../../componenets/EmailSection";
+import BackToTop from "../../componenets/BackToTop";
 
 interface MyTheme {
   background: string;
@@ -47,6 +48,7 @@ export default function IndexPage() {
         <Skills isLight={isLight} />
         <MyProjects isLight={isLight} />
         <EmailSection />
+        <BackToTop />
       </Container>
     </ThemeProvider>
   );
